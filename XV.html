@@ -491,9 +491,16 @@
                                             <div class="ue-audio-player__container ue-audio-player__container--content"></div>
                                             <div class="ue-audio-controls">
                                                 <div class="ue-audio-player__container ue-audio-player__container--controls">
-                                                    <audio class="ue-audio-player-element ue-audio-player-element__controls" autoplay>
+                                                    <audio id="miAudio" class="ue-audio-player-element ue-audio-player-element__controls" autoplay>
                                                         <source src="/Ariana Grande, The Weeknd - Love Me Harder.mp3" type="audio/mp3">
                                                     </audio>
+                                                    <script>
+  const audio = document.getElementById("miAudio");
+  audio.addEventListener("loadedmetadata", () => {
+    audio.currentTime = 10; // empieza desde el segundo 15
+    audio.play();
+  });
+</script>
                                                 </div>
                                             </div>
                                         </div>
@@ -2180,5 +2187,6 @@
 <!-- end Simple Custom CSS and JS -->
 </body>
 </html>
+
 
 
